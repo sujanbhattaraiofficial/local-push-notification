@@ -28,14 +28,14 @@ class _LocalNotificationsState extends State<LocalNotifications> {
   @override
   void initState() {
     super.initState();
-    ok();
+    initializing();
   }
 
   void _showNotification() async {
     await notificationSchedule();
   }
 
-  void ok() async {
+  void initializing() async {
     androidInitializationSettings = AndroidInitializationSettings('app_icon');
     iosInitializationSettings = IOSInitializationSettings(
         onDidReceiveLocalNotification: onDidReceiveLocalNotification);
