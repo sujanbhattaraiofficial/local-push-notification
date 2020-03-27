@@ -55,8 +55,8 @@ class _LocalNotificationsState extends State<LocalNotifications> {
         androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
     await flutterLocalNotificationsPlugin.show(
         0,
-        'scheduled title',
-        'scheduled body',
+        'Hi there',
+        'Subscibe my youtube channel',
         // scheduledNotificationDateTime,
         platformChannelSpecifics);
   }
@@ -94,7 +94,8 @@ class _LocalNotificationsState extends State<LocalNotifications> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: _showNotification),
+      floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.notifications), onPressed: _showNotification),
     );
   }
 }
